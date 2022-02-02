@@ -1,1 +1,2 @@
-export const baseUrl = 'https://labeninjas.herokuapp.com';
+const baseUrl = 'https://labeninjas.herokuapp.com';
+export default baseUrl;

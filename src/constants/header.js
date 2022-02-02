@@ -1,20 +1,7 @@
-import axios from "axios";
-import { baseUrl } from "./baseUrl";
-
-const key = "asfghfyg-tfydyd-vhvhh-cxxszscd";
-
-const body = {
-    "key": key
-};
-
-
-axios.post(`${baseUrl}/auth`, body)
-.then((res) => {console.log(res.data)})
-.catch((err) => {console.log(err.response)});
-    
-
 export const header = {
     headers:{
-        Authorization: key
-    }
-};    
+        Authorization: '70434e81-f4a8-4ca8-9c6c-99f300e03f9b'
+    }    
+};   
+
+export default header;
