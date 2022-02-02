@@ -1,5 +1,5 @@
 ## Labe Ninjas
-*talento certo, no momento certo!
+*talento certo, no momento certo!*
 
 ## O que estamos fazendo aqui?
 - Nosso produto se trata se uma platafórma intuítiva e inclusiva, que pretende disponibilizar um serviço de contratação e divulgação de trabalhos autônomos e diversos.
