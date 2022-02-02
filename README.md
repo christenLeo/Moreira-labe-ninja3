@@ -13,7 +13,8 @@
 - Danilo Silvério -
 
 ### Wireframe:
--[New Project.pdf](https://github.com/future4code/Moreira-labe-ninja3/files/7983125/New.Project.pdf)
+-[wireframe-labeninjas-pdf.pdf](https://github.com/future4code/Moreira-labe-ninja3/files/7990788/wireframe-labeninjas-pdf.pdf)
+
 
 
 ### Link do surge (ainda em branco):
