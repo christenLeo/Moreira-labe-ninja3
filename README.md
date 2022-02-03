@@ -10,7 +10,7 @@
 - Adriano Brito - https://github.com/Britobtx
 - Antonio Junior - https://github.com/antoniosantos2
 - Larissa Firmino - https://github.com/future4code/moreira-Larissa-Santos
-- Danilo Silvério -
+- Danilo Silvério - https://github.com/Danilo-Silverio
 
 ### Wireframe:
 -[wireframe-labeninjas-pdf.pdf](https://github.com/future4code/Moreira-labe-ninja3/files/7990788/wireframe-labeninjas-pdf.pdf)
