@@ -9,7 +9,6 @@ justify-content:center;
 width: 300px;
 margin-left:500px;
 background-color:yellow;
-}
 
 
 h5{
@@ -45,7 +44,7 @@ export default class CadastrarJob extends React.Component {
     inputPagamento: [],
     inputData: "",
   };
-
+  
   OnChangeTitulo = (event) => {
     this.setState({ inputTitulo: this.target.value });
   };
@@ -61,35 +60,37 @@ export default class CadastrarJob extends React.Component {
   OnChangeData = (event) => {
     this.setState({ inputData: this.target.value });
   };
+  
 
   render() {
     return (
       <OrganizarInput>
         <h1>Cadastrar Job</h1>
         <input
-          value={this.inputTitulo}
+          value={this.state.inputTitulo}
           placeholder={"Titulo"}
           onChange={this.OnChangeTitulo}
         />
         <input
-          value={this.inputDescricao}
+          value={this.state.inputDescricao}
           placeholder={"Descrição"}
           onChange={this.onChangeDescricao}
         />
         <input
-          value={this.inputPreco}
+          value={this.state.inputPreco}
           type="number"
           placeholder={"Preço"}
           onChange={this.OnChangePreco}
         />
         <h5>Forma de Pagamento</h5>
-        <select value={this.inputPagamento} onChange={this.OnChangePagamento}>
-          <option>Cartão de crédito</option>
-          <option>Paypal</option>
-          <option>Débito</option>
-          <option>Boleto</option>
-          <option>Pix</option>
+        <select value={this.state.inputPagamento} onChange={this.OnChangePagamento}>
+          <option value="cartao de credito">Cartão de crédito</option>
+          <option value="Paypal">Paypal</option>
+          <option value="Debito">Débito</option>
+          <option valeu="Boleto">Boleto</option>
+          <option value ="Pix">Pix</option>
         </select>
+        
         <input
           value={this.state.inputData}
           type="date"
