@@ -7,10 +7,9 @@ import logo from './assets/img/labeninjas-logo.png';
 import icon from './assets/img/labeninjas-Icon.png';
 import style, {} from './style.js';
 import styled from 'styled-components';
-import Home from './pages/Home/Home.js';
 import CadastrarJob from './components/CadastrarJob';
-import JobCatalogPage from './pages/JobCatalogPage/JobCatalogPage.js';
-
+import JobCatalogPage from './Pages/JobCatalogPage/JobCatalogPage.js';
+import Home from './Pages/Home/Home.js';
 
 /* 
 páginas:
@@ -24,7 +23,13 @@ class App extends Component {
 
 	state = {
 		jobsList: [],
-		currentPage: 'home'
+		currentPage: 'home',
+		inputTitulo: "",
+		inputDescricao: "",
+		inputPreco: "",
+		inputPagamento: [],
+		inputData: ""
+
 	};
 
 	componentDidMount = () => {
@@ -57,7 +62,34 @@ class App extends Component {
 	goToHomePage = () => {
 		this.setState({currentPage: 'home'});
 	};
-		
+	onChangeTitulo = (event) => {
+		this.setState({ inputTitulo: event.target.value });
+	};
+	OnChangeDescricao = (event) => {
+		this.setState({ inputDescricao: event.target.value });
+	};
+	OnChangePreco = (event) => {
+		this.setState({ inputPreco: event.target.value });
+	};
+	OnChangePagamento = (event) => {
+		this.setState({ inputPagamento: event.target.value });
+	};
+	OnChangeData = (event) => {
+		this.setState({ inputData: event.target.value });
+	};
+	createJob=()=>{
+		const body ={
+		"title":this.state.inputTitulo,
+		"description":this.state.inputDescricao,
+		"price":this.state.inputPreco,
+		"paymentMethods":this.state.inputPagamento,
+		"dueDate":this.state.inputData
+		};
+		axios.post(`${baseUrl}/jobs`,body,header)
+		.then((res)=>{console.log(res)})
+		.catch((err)=>{console.log(err.response)})
+
+	}; 	
 	render() {
 
 		switch (this.state.currentPage) {
@@ -65,7 +97,7 @@ class App extends Component {
 				return (
 					<Home
 					goToCatalogPage={this.goToCatalogPage}
-					goToCadastroPage={this.goToCadastroPage}
+	                goToCadastroJobPage={this.goToCadastroJobPage}
 					/>
 				);
 
@@ -78,7 +110,20 @@ class App extends Component {
 				);
 
 			case 'cadastro-job':
-				return <CadastrarJob />;
+				return( 
+				<CadastrarJob 
+				createJob={this.createJob}
+				onChangeTitulo={this.onChangeTitulo}
+				OnChangeDescricao={this.OnChangeDescricao}
+				OnChangePreco={this.OnChangePreco}
+				OnChangePagamento={this.OnChangePagamento}
+				OnChangeData={this.OnChangeData}
+				inputTitulo={this.state.inputTitulo}
+				inputDescricao={this.state.inputDescricao}
+				inputPreco={this.state.inputPreco}
+				inputPagamento={this.state.inputPagamento}
+				inputData={this.state.inputData}
+				/>);
 				
 			case 'carrinho':
 				return 'num tem ainda';

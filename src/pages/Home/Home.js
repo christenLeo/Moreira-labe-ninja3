@@ -7,7 +7,7 @@ const Home = (props) => {
         <>
             <Header
             goToCatalogPage={props.goToCatalogPage}
-            goToCadastroPage={props.goToCadastroPage}
+            goToCadastroPage={props.goToCadastroJobPage}
             />
             <main>
                 <img src="https://redeizee.com.br/wp-content/uploads/2021/01/Blog_Post_02-768x310.png" alt="pessoas firmando um acordo" />
@@ -16,7 +16,7 @@ const Home = (props) => {
                 <h3>Procurando um Job? ou anunciando?</h3>
                 <>
                 <button onClick={() => {props.goToCatalogPage()}}>Contrate um job</button>
-                <button goToCadastroPage={() => {props.goToCadastroPage()}}>Divulgue seu job</button>
+                <button onClick={() => {props.goToCadastroJobPage()}}>Divulgue seu job</button>
                 </>
             </main>
             <Footer/>
