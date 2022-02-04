@@ -9,9 +9,11 @@ const Header = (props) => {
 
             <div>
             <button onClick={() => {props.goToCatalogPage()}}>Contrate um job</button>
-            <button goToCadastroPage={() => {props.goToCadastroPage()}}>Divulgue seu job</button>
+
+            <button onClick={() => {props.goToCadastroPage()}}>Divulgue seu job</button>
             </div>
         </Head>
+
     );
 };
 export default Header;

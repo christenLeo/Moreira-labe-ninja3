@@ -37,29 +37,7 @@ button{
 
 
 export default class CadastrarJob extends React.Component {
-  state = {
-    inputTitulo: "",
-    inputDescricao: "",
-    inputPreco: "",
-    inputPagamento: [],
-    inputData: "",
-  };
   
-  OnChangeTitulo = (event) => {
-    this.setState({ inputTitulo: this.target.value });
-  };
-  OnChangeDescricao = (event) => {
-    this.setState({ inputDescricao: this.target.value });
-  };
-  OnChangePreco = (event) => {
-    this.setState({ inputDescricao: this.target.value });
-  };
-  OnChangePagamento = (event) => {
-    this.setState({ inputPagamento: this.target.value });
-  };
-  OnChangeData = (event) => {
-    this.setState({ inputData: this.target.value });
-  };
   
 
   render() {
@@ -67,23 +45,23 @@ export default class CadastrarJob extends React.Component {
       <OrganizarInput>
         <h1>Cadastrar Job</h1>
         <input
-          value={this.state.inputTitulo}
+          value={this.props.inputTitulo}
           placeholder={"Titulo"}
-          onChange={this.OnChangeTitulo}
+          onChange={this.props.onChangeTitulo}
         />
         <input
-          value={this.state.inputDescricao}
+          value={this.props.inputDescricao}
           placeholder={"Descrição"}
-          onChange={this.onChangeDescricao}
+          onChange={this.props.OnChangeDescricao}
         />
         <input
-          value={this.state.inputPreco}
-          type="number"
+          value={this.props.inputPreco}
+          type="text"
           placeholder={"Preço"}
-          onChange={this.OnChangePreco}
+          onChange={this.props.OnChangePreco}
         />
         <h5>Forma de Pagamento</h5>
-        <select value={this.state.inputPagamento} onChange={this.OnChangePagamento}>
+        <select value={this.props.inputPagamento} onChange={this.props.OnChangePagamento}>
           <option value="cartao de credito">Cartão de crédito</option>
           <option value="Paypal">Paypal</option>
           <option value="Debito">Débito</option>
@@ -92,11 +70,11 @@ export default class CadastrarJob extends React.Component {
         </select>
         
         <input
-          value={this.state.inputData}
+          value={this.props.inputData}
           type="date"
-          onChange={this.OnChangeData}
+          onChange={this.props.OnChangeData}
         />
-        <button>Cadastrar Serviço</button>
+        <button onClick={this.props.createJob} type="button">Cadastrar Serviço</button>
       </OrganizarInput>
     );
   }
