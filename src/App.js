@@ -1,10 +1,16 @@
+
 import React, { Component } from 'react';
 import axios from 'axios';
 import baseUrl from './constants/baseUrl.js';
 import header from './constants/header.js';
 import {} from './style.js';
-import Home from './pages/Home/Home.js'
+import logo from './assets/img/labeninjas-logo.png';
+import icon from './assets/img/labeninjas-Icon.png';
+import styled from 'styled-components';
+import Home from './pages/Home/Home.js';
+import CadastrarJob from './components/CadastrarJob';
 import JobCatalogPage from './pages/JobCatalogPage/JobCatalogPage.js';
+
 
 /* 
 páginas:
@@ -72,7 +78,7 @@ class App extends Component {
 				);
 
 			case 'cadastro-job':
-				return 'num tem ainda';
+				return <CadastrarJob />;
 				
 			case 'carrinho':
 				return 'num tem ainda';
@@ -80,7 +86,9 @@ class App extends Component {
 			default:
 				return <h2>Página não encontrada</h2>;
 		}
+
 	};
 };
 
 export default App;
+
