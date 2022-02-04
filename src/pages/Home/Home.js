@@ -6,7 +6,7 @@ import {Main} from './style.js';
 
 const Home = (props) => {
     return (
-        <>
+        <div>
             <Header
             goToCatalogPage={props.goToCatalogPage}
             goToCadastroPage={props.goToCadastroJobPage}
@@ -16,16 +16,16 @@ const Home = (props) => {
                 <h2>Talento certo, no momento certo!</h2>
 
                 <h3>Procurando um Job? ou anunciando?</h3>
-            <div>
+                
                 <button onClick={() => {props.goToCatalogPage()}}>Contrate um job</button>
 
                 <button onClick={() => {props.goToCadastroJobPage()}}>Divulgue seu job</button>
-                        
-            </div>
+                
             </Main>
 
+                
             <Footer/>
-        </>
+        </div>
     );
 };
 export default Home;
