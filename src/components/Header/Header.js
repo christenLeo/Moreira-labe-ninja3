@@ -4,11 +4,13 @@ import {Head} from './style.js'
 
 const Header = (props) => {
     return (
-        <Header>
+        
+        <Head>
             <img src={Icon} alt='&nbsp;Icone Labeninjas'/>
+            <div>
             <button onClick={() => {props.goToCatalogPage()}}>Contrate um job</button>
             <button onClick={() => {props.goToCadastroPage()}}>Divulgue seu job</button>
-            
+            </div>
         </Head>
 
   
