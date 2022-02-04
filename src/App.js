@@ -11,6 +11,7 @@ import CadastrarJob from './components/CadastrarJob';
 import JobCatalogPage from './Pages/JobCatalogPage/JobCatalogPage.js';
 import Home from './Pages/Home/Home.js';
 
+
 /* 
 páginas:
 home
@@ -77,6 +78,9 @@ class App extends Component {
 	OnChangeData = (event) => {
 		this.setState({ inputData: event.target.value });
 	};
+
+	
+
 	createJob=()=>{
 		const body ={
 		"title":this.state.inputTitulo,
@@ -95,10 +99,14 @@ class App extends Component {
 		switch (this.state.currentPage) {
 			case 'home' :	
 				return (
+					<div>
 					<Home
 					goToCatalogPage={this.goToCatalogPage}
 	                goToCadastroJobPage={this.goToCadastroJobPage}
+					
 					/>
+					
+					</div>
 				);
 
 			case 'job-catalog':
@@ -125,13 +133,15 @@ class App extends Component {
 				inputData={this.state.inputData}
 				/>);
 				
+				
 			case 'carrinho':
 				return 'num tem ainda';
 
 			default:
 				return <h2>Página não encontrada</h2>;
+				
 		}
-
+		
 	};
 };
 

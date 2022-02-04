@@ -38,7 +38,6 @@ button{
 
 export default class CadastrarJob extends React.Component {
   
- 
   
 
   render() {
