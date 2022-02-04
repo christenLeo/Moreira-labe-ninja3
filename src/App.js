@@ -4,18 +4,15 @@ import axios from 'axios';
 import baseUrl from './constants/baseUrl.js';
 import header from './constants/header.js';
 import {} from './style.js';
-import logo from './assets/img/labeninjas-logo.png';
-import icon from './assets/img/labeninjas-Icon.png';
-import styled from 'styled-components';
 import CadastrarJob from './components/CadastrarJob';
-import JobCatalogPage from './Pages/JobCatalogPage/JobCatalogPage.js';
 import Home from './Pages/Home/Home.js';
+import TalentosJob from "./Pages/TalentosJob/TalentosJob";
 
 
 /* 
 páginas:
 home
-cadastro-job
+cadastro-job 
 job-catalog
 carrinho
 */
@@ -30,7 +27,6 @@ class App extends Component {
 		inputPreco: "",
 		inputPagamento: [],
 		inputData: ""
-
 	};
 
 	componentDidMount = () => {
@@ -111,7 +107,7 @@ class App extends Component {
 
 			case 'job-catalog':
 				return	(
-					<JobCatalogPage
+					<TalentosJob
 					goToHomePage={this.goToHomePage}
 					goToCarrinhoPage={this.goToCarrinhoPage}
 					/>
