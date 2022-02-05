@@ -5,6 +5,7 @@ export const Foot = styled.footer`
     align-items: flex-start;
     justify-content: space-between;
     font-family: sans-serif;
+    width: 100vw;
 
     img{
         width: 150px;
@@ -14,5 +15,6 @@ export const Foot = styled.footer`
         display: flex;
         flex-direction: column;
         text-align: right;
+        margin: 0 30px 0 0;
     }
 `;

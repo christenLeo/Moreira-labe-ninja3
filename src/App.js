@@ -3,10 +3,13 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import baseUrl from './constants/baseUrl.js';
 import header from './constants/header.js';
-import {} from './style.js';
-import CadastrarJob from './components/CadastrarJob';
+import {Test} from './style.js';
+import CadastrarJob from './components/CadastrarJob.js';
 import Home from './Pages/Home/Home.js';
-import TalentosJob from "./Pages/TalentosJob/TalentosJob";
+import TalentosJob from "./Pages/TalentosJob/TalentosJob.js";
+import Carrinho from './Pages/Carrinho/Carrinho.js'
+import Header from "./components/Header/Header.js";
+import Footer from "./components/Footer/Footer";
 
 
 /* 
@@ -89,49 +92,72 @@ class App extends Component {
 		.then((res)=>{console.log(res)})
 		.catch((err)=>{console.log(err.response)})
 
+		this.setState({});
+
 	}; 	
 	render() {
 
 		switch (this.state.currentPage) {
 			case 'home' :	
 				return (
-					<div>
-					<Home
-					goToCatalogPage={this.goToCatalogPage}
-	                goToCadastroJobPage={this.goToCadastroJobPage}
-					
-					/>
-					
-					</div>
+					<Test>
+						<Header
+						goToCatalogPage={this.goToCatalogPage}
+						goToCadastroPage={this.goToCadastroJobPage}
+						/>
+						<Home
+						goToCatalogPage={this.goToCatalogPage}
+						goToCadastroJobPage={this.goToCadastroJobPage}
+						/>
+						<Footer/>
+					</Test>
 				);
 
 			case 'job-catalog':
 				return	(
-					<TalentosJob
-					goToHomePage={this.goToHomePage}
-					goToCarrinhoPage={this.goToCarrinhoPage}
-					/>
+					<Test>
+						<Header/>
+						<TalentosJob
+						goToHomePage={this.goToHomePage}
+						goToCarrinhoPage={this.goToCarrinhoPage}
+						/>
+						<Footer/>
+					</Test>
 				);
 
 			case 'cadastro-job':
-				return( 
-				<CadastrarJob 
-				createJob={this.createJob}
-				onChangeTitulo={this.onChangeTitulo}
-				OnChangeDescricao={this.OnChangeDescricao}
-				OnChangePreco={this.OnChangePreco}
-				OnChangePagamento={this.OnChangePagamento}
-				OnChangeData={this.OnChangeData}
-				inputTitulo={this.state.inputTitulo}
-				inputDescricao={this.state.inputDescricao}
-				inputPreco={this.state.inputPreco}
-				inputPagamento={this.state.inputPagamento}
-				inputData={this.state.inputData}
-				/>);
+				return(
+					<Test> 
+						<Header
+						goToCatalogPage={this.goToCatalogPage}
+						goToCadastroPage={this.goToCadastroJobPage}
+						/>
+						<CadastrarJob 
+						createJob={this.createJob}
+						onChangeTitulo={this.onChangeTitulo}
+						OnChangeDescricao={this.OnChangeDescricao}
+						OnChangePreco={this.OnChangePreco}
+						OnChangePagamento={this.OnChangePagamento}
+						OnChangeData={this.OnChangeData}
+						inputTitulo={this.state.inputTitulo}
+						inputDescricao={this.state.inputDescricao}
+						inputPreco={this.state.inputPreco}
+						inputPagamento={this.state.inputPagamento}
+						inputData={this.state.inputData}
+						/>
+						<Footer/>
+					</Test>
+				);
 				
 				
 			case 'carrinho':
-				return 'num tem ainda';
+				return (
+					<Test>
+						<Header/>
+						<Carrinho/>
+						<Footer/>
+					</Test>
+				);
 
 			default:
 				return <h2>Página não encontrada</h2>;

@@ -26,6 +26,7 @@ export const Main = styled.main`
     div{
         display:flex;
         justify-content: center;
+        overflow-x: hidden;
     }
     button{
         margin: 0 2rem;
