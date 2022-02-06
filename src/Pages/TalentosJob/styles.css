@@ -1,12 +1,12 @@
 
-/* header{
+ header{
     background-color: grey;
     display: flex;
     justify-content: space-between;
     height: 60px;
     align-items: center;
-} */
-/* 
+} 
+
 .cards{
     background-color: rgb(194, 191, 175);
     border: 1px solid black;
@@ -38,4 +38,4 @@ nav{
     display: flex;
     padding: 1%;
     justify-content: space-between;
-} */
+} 

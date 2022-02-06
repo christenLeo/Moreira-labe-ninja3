@@ -9,6 +9,7 @@ export const Head = styled.header`
     img{
         width: 200px;
         margin: 1rem;
+        cursor: pointer;
     }
     div{
         margin: 0.5rem 0.5rem 0 0.5rem;

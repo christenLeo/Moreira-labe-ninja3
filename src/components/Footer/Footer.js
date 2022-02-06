@@ -8,7 +8,7 @@ const Footer = () => {
             <img src={Logo} alt="logo labeninjas" />
 
             <div>
-            <h4>sigam a gente no git-hub</h4>
+            <h4>Nos sigam no git-hub</h4>
             <a href="">Leo Christen</a>
             <a href="">Larissa Firmino</a>
             <a href="">Adriano Brito</a>
