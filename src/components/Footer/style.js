@@ -8,7 +8,7 @@ export const Foot = styled.footer`
     width: 100vw;
 
     img{
-        width: 150px;
+        width: 120px;
         margin-top: 15px;
     }
     div{
@@ -17,4 +17,17 @@ export const Foot = styled.footer`
         text-align: right;
         margin: 0 30px 0 0;
     }
+
+    @media screen and (min-width: 1022px) {
+        &{
+            flex-direction: row;
+            justify-content: space-between;
+            border-bottom: 1px solid darkviolet;
+        }
+        div{
+            border: none;
+            text-align: right;
+        }    
+    }
+
 `;
