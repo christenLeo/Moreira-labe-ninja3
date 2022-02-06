@@ -14,11 +14,10 @@
     margin: 12px;
     flex-direction: column;
     justify-content: space-between;
-    padding-left: 2%;
-    padding-bottom: 1%;
-    padding-top: 2%;
+    padding: 1rem;
     align-items: left;
-    height: 120%;
+    width: 400px;
+    margin:1rem;
 }
 
 .botao{
@@ -28,10 +27,8 @@
 }
 
 main{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 10px;
-    margin: 20px;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 nav{

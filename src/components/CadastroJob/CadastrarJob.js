@@ -20,16 +20,10 @@ const Container = styled.div`
   text-align: center;
   display: flex;
   flex-direction: column;
-  width: 250px;
+  width: 280px;
 `;
 
-const formInicial = {
-  inputTitulo: "",
-  inputDescricao: "",
-  inputPreco: "",
-  inputPagamento: [],
-  inputData: ""
-}
+
 export default class CadastrarJob extends React.Component {
 
   state = {
@@ -81,7 +75,14 @@ export default class CadastrarJob extends React.Component {
   onChangeData = (event) => {
     this.setState({ inputData: event.target.value });
   };
-
+  limparForm = () =>{
+    this.setState({
+      inputTitulo: "",
+      inputDescricao: "",
+      inputPreco: "",
+      inputData: ""  
+    })
+  }
   createJob = () => {
     const pagamentos = []
     if (this.state.checkboxBoleto)
@@ -108,10 +109,12 @@ export default class CadastrarJob extends React.Component {
       "dueDate": this.state.inputData
     };
     axios.post(`${baseUrl}/jobs`, body, header)
-      .then((res) => { console.log(res) })
+      .then((res) => { 
+        this.limparForm()
+        alert("Trabalho criado")
+        console.log(res) 
+      })
       .catch((err) => { console.log(err.response) })
-
-    this.setState({ ...this.state, formInicial });
 
   };
   render() {
