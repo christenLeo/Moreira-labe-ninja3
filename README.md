@@ -18,6 +18,6 @@
 
 
 ### Link do surge (ainda em branco):
-first-stream.surge.sh
+nosso-labeninjas.surge.sh
 
 ### Prints:
