@@ -2,8 +2,6 @@ import axios from "axios";
 import React from "react";
 import baseUrl from "../../constants/baseUrl";
 import header from "../../constants/header";
-import "./styles.css"
-
 
 export default class TalentosJob extends React.Component {
     state = {

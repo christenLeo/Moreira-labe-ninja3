@@ -18,7 +18,7 @@ carrinho
 
 class App extends Component {
 	state = {
-		currentPage: 'job-catalog',
+		currentPage: 'home',
 		cart: []
 	};
 
