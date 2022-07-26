@@ -17,7 +17,7 @@
 
 
 
-### Link do surge (ainda em branco):
-nosso-labeninjas.surge.sh
+### Link do surge:
+https://nosso-labeninjas.surge.sh
 
 ### Prints:
